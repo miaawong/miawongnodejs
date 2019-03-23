@@ -34,11 +34,11 @@ app.set('view engine', 'html');
 
 // setting up a route for the '/' root directory 
 // when this route is hit, it will render index view. 
-app.get('/', (req, res) => {
-    Post.find({}, (err, posts) => {
-        res.render('index', { posts: posts });
-    });
-});
+// app.get('/', (req, res) => {
+//     Post.find({}, (err, posts) => {
+//         res.render('index', { posts: posts });
+//     });
+// });
 
 // addpost route and redirect to root once this is completed and return and error if needed 
 // app.post('/addPost', (req, res) => {
