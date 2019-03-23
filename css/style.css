@@ -1,0 +1,154 @@
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Roboto Mono', monospace; 
+    height: 100%; 
+    width: 100%; 
+  
+}
+.navbar { 
+   position: absolute; 
+    width: 100%; 
+}
+.logo { 
+    position: static; 
+    float: right; 
+    font-weight: bold; 
+ 
+    padding: 0 20px;  
+   
+}
+.toggle { 
+    float: left; 
+    position: fixed; 
+    top: 20px; 
+    left: 20px; 
+    min-width: 40px; 
+    height: 40px; 
+    background: #262626; 
+    cursor: pointer; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    transition: 0.5s; 
+    z-index: 10; 
+    border: 1px solid #fff; 
+    padding: 0 20px; 
+
+}
+.toggle:before{ 
+    content: 'Menu'; 
+    color: #fff; 
+    line-height: 40px; 
+
+}
+.toggle.active:before{ 
+    content: 'Close'; 
+    color: #fff; 
+    line-height: 40px; 
+
+}
+.sidebar { 
+    position: fixed; 
+    top: 0;
+    /* left: -100%, hides it  */
+    left: -100%; 
+    width: 100%; 
+    height: 100%; 
+    background: #262626;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 0.5s;  
+
+}
+.sidebar.active { 
+    /* when active left is 0  */
+    left: 0; 
+}
+ul { 
+    position: relative; 
+}
+ul li { 
+    list-style: none; 
+    text-align: center;
+}
+ul li a { 
+    display: block; 
+    text-decoration: none; 
+    padding: 5px; 
+    text-transform: uppercase; 
+    color: #fff; 
+    font-size: 30px; 
+    letter-spacing: 1px; 
+    font-weight: bold; 
+    transition: 0.5s; 
+
+}
+ul li a:hover { 
+    color: #ffeb3b; 
+
+}
+.container { 
+   
+    display: grid; 
+    grid-template-columns: repeat(2,50%); 
+    width: 100%; 
+    height: 100%; 
+ 
+}
+
+.left-half { 
+    height: 100vh; 
+    width: 100%; 
+  
+    
+ 
+ }
+.left-half img { 
+  
+  height: 100%; 
+  width: 100%;
+  object-fit: cover; 
+
+} 
+.right-half { 
+    text-align: center; 
+   
+    height: 100vh;
+
+}
+.content{ 
+    padding: 250px 10px 10px 10px; 
+    word-wrap: break-word; 
+   
+
+}
+
+@media only screen and (max-width: 1020px) { 
+    .container { 
+        display: grid; 
+     
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "a"
+        "b"; 
+        align-items: start; 
+        grid-template-rows: 400px 500px; 
+    }
+    .left-half { 
+        grid-area: a; 
+        height: 100%; 
+    }
+  
+    .right-half { 
+        grid-area: b; 
+        height: 100vh; 
+    } 
+    .content { 
+        padding-top: 0px; 
+      
+      
+    }
+
+} 
+
