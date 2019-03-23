@@ -7,7 +7,7 @@ const app = express();
 
 
 const port = process.env.PORT || 3000;
-const host = process.env.HOST || localhost;
+const host = process.env.HOST || 'localhost';
 
 // the last part of the connection url is the name of our db 
 
