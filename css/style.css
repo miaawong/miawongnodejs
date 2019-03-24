@@ -113,12 +113,11 @@ ul li a:hover {
 } 
 .right-half { 
     text-align: center; 
-   
     height: 100vh;
-
+    padding: 250px 10px 10px 10px; 
 }
 .content{ 
-    padding: 250px 10px 10px 10px; 
+    
     word-wrap: break-word; 
    
 
@@ -143,13 +142,10 @@ ul li a:hover {
     .right-half { 
         grid-area: b; 
         height: 100vh; 
+        padding-top:0px; 
     } 
     .content { 
         padding-top: 0px; 
-        padding-bottom: 10px; 
-      
-      
-    }
+    } 
 
 } 
-
