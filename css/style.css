@@ -143,9 +143,6 @@ ul li a:hover {
         grid-area: b; 
         height: 100vh; 
         padding-top:0px; 
+        padding-bottom: 20px; 
     } 
-    .content { 
-        padding-top: 0px; 
-    } 
-
 } 
