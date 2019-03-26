@@ -89,20 +89,12 @@ ul li a:hover {
 
 }
 .container { 
-   
-    display: grid; 
-    grid-template-columns: repeat(2,50%); 
-    width: 100%; 
-    height: 100%; 
- 
+   display: flex; 
 }
 
 .left-half { 
     height: 100vh; 
-    width: 100%; 
-  
-    
- 
+    width: 50%; 
  }
 .left-half img { 
   
@@ -112,36 +104,29 @@ ul li a:hover {
 
 } 
 .right-half { 
+    flex: 1; 
     text-align: center; 
     height: 50%; 
     padding: 250px 10px 10px 10px; 
 }
-.content{ 
-    
+.content{
     word-wrap: break-word; 
-   
-
 }
 
 @media only screen and (max-width: 1020px) { 
     .container { 
-        display: grid; 
-     
-        grid-template-columns: auto;
-        grid-template-areas: 
-        "a"
-        "b"; 
-        align-items: start; 
-        grid-template-rows: 400px 500px; 
+        display: flex; 
+        flex-direction: column; 
     }
     .left-half { 
-        grid-area: a; 
+        width: 100%;  
+        height: 50vh;  
+    }
+    .left-half img { 
         height: 100%; 
     }
   
     .right-half { 
-        grid-area: b; 
-        height: 100vh; 
         padding-top:0px; 
         margin-bottom: 20px; 
     } 
